@@ -3,6 +3,7 @@ package com.learningandroid.amphibians.network
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+
 @Serializable
 data class AmphibianData(
   val name: String,

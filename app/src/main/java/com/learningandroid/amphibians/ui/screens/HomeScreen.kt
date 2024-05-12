@@ -42,9 +42,12 @@ fun HomeScreen(
   contentPadding: PaddingValues,
 ) {
   when (amphibianUiState) {
-    is AmphibianUiState.Loading -> LoadingScreen(modifier = modifier.fillMaxSize())
-    is AmphibianUiState.Success -> AmphibianScreen(amphibianUiState.amphibians, modifier = modifier)
     is AmphibianUiState.Error -> ErrorScreen(retryAction, modifier = modifier.fillMaxSize())
+    is AmphibianUiState.Loading -> LoadingScreen(modifier = modifier.fillMaxSize())
+    is AmphibianUiState.Success -> AmphibianScreen(
+      amphibianUiState.amphibians,
+      contentPadding = contentPadding, modifier = modifier
+    )
   }
 }
 
