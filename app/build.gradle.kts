@@ -1,7 +1,7 @@
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.jetbrains.kotlin.android)
-  id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
+  id("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
 }
 
 android {
@@ -38,7 +38,7 @@ android {
     compose = true
   }
   composeOptions {
-    kotlinCompilerExtensionVersion = "1.5.3"
+    kotlinCompilerExtensionVersion = "1.5.0"
   }
   packaging {
     resources {
